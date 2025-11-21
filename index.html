@@ -11,8 +11,42 @@
 </head>
 
 <body>
-    <h1>Weather Application</h1>
-    <script src="assets/js/app.js"></script>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <span><img src="assets/img/weather logo.png" alt="" width="100px"></span>
+        <h2>Weather forecast</h2>
+      </div>
+      <h3>Favourite Locations</h3>
+      <ul class="locations">
+        <li>Kandy</li>
+        <li class="active">Panadura</li>
+        <li>Colombo</li>
+      </ul>
+      <h4>Preferences</h4>
+      <div class="preferences">
+        <label>
+          <input type="checkbox" id="unit-toggle">
+          <span>°C / °F</span>
+        </label>
+        <label>
+          <input type="checkbox" id="mode-toggle">
+          <span>🌙 / ☀️</span>
+        </label>
+        <label>
+          <input type="radio" name="hours" checked>
+          <span>24H</span>
+        </label>
+        <label>
+          <input type="radio" name="hours">
+          <span>12H</span>
+        </label>
+      </div>
+    </aside>
+    
+      
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
 </body>
-
 </html>
