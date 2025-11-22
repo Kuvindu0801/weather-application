@@ -9,11 +9,11 @@ body {
   height: 100vh;
   margin: 0;
 }
-
+/* sidebar */
 .sidebar {
   background: #f3f6fa;
-  width: 260px;
-  margin-left:0 ;
+  width: 300px;
+  margin: left 10px; ;
   padding:10px;
   box-shadow: 2px 0 6px rgba(44,62,80,0.08);
   display: flex;
@@ -29,6 +29,7 @@ body {
   font-weight: bold;
   color: #4291f0;
 }
+/* location unordered list */
 .locations {
   list-style: none;
   padding: 0;
@@ -43,12 +44,110 @@ body {
   color: #4a90e2;
   font-weight: bold;
 }
+
+
+
 .preferences {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+
+/* toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* detail section */
+.header{
+    display: flex;
+    flex-direction: row;
+}
+.loc-dot{
+  display: flex;
+  flex-direction: row;
+  width: 50px;
+  }
+.search{
+  margin-left: 350px;
+
+}
+.star{
+  width: 50px;
+  margin-left: 300px;
+}
+.container-weather {
+  position: relative;
+  width: 1100px; 
+  height: 768px;
+  margin: 0; 
+}
+
+.container-weather .content {
+  position: absolute;
+  top: 0; 
+  background: rgb(125, 173, 210); 
+  background: rgba(195, 231, 243, 0.801); 
+  color: #f1f1f1;
+  width: 100%; 
+  padding: 20px; 
+}
 
 @media (max-width: 970px) {
   .container { flex-direction: column;}
